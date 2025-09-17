@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const logSchema = new mongoose.Schema({
   message: {
@@ -7,8 +7,8 @@ const logSchema = new mongoose.Schema({
   },
   level: {
     type: String,
-    enum: ['info', 'warning', 'error'],
-    default: 'info',
+    enum: ["info", "warning", "error"],
+    default: "info",
   },
   timestamp: {
     type: Date,
@@ -20,4 +20,4 @@ const logSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Log', logSchema);
+module.exports = mongoose.model("Log", logSchema);
