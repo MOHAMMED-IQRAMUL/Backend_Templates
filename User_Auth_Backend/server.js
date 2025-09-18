@@ -1,7 +1,7 @@
-require('dotenv').config();
-const express = require('express');
-const connectDB = require('./config/db');
-const userRoutes = require('./routes/userRoutes');
+require("dotenv").config();
+const express = require("express");
+const connectDB = require("./config/db");
+const userRoutes = require("./routes/userRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -16,11 +16,11 @@ dbConnect = async () => {
 dbConnect();
 
 // Routes
-app.use('/api/users', userRoutes);
+app.use("/api/users", userRoutes);
 
 // Root endpoint
-app.get('/', (req, res) => {
-  res.send('User Auth Backend is running.');
+app.get("/", (req, res) => {
+  res.send("User Auth Backend is running.");
 });
 
 // Error handler
